@@ -1,0 +1,14 @@
+2024-11-23 17:00:41,451 - INFO - Conexion a la base de datos fue exitosa
+2024-11-23 17:00:41,454 - INFO - Archivo data_retail/departments leido correctamente
+2024-11-23 17:00:41,455 - INFO - Archivo data_retail/categories leido correctamente
+2024-11-23 17:00:41,468 - INFO - Archivo data_retail/customers leido correctamente
+2024-11-23 17:00:41,475 - INFO - Archivo data_retail/products leido correctamente
+2024-11-23 17:00:41,504 - INFO - Archivo data_retail/orders leido correctamente
+2024-11-23 17:00:41,567 - INFO - Archivo data_retail/order_items leido correctamente
+2024-11-23 17:00:41,598 - INFO - Datos cargados correctamente en la tabla departments
+2024-11-23 17:00:41,603 - INFO - Datos cargados correctamente en la tabla categories
+2024-11-23 17:00:42,090 - INFO - Datos cargados correctamente en la tabla customers
+2024-11-23 17:00:42,164 - INFO - Datos cargados correctamente en la tabla products
+2024-11-23 17:00:44,051 - INFO - Datos cargados correctamente en la tabla orders
+2024-11-23 17:00:49,252 - INFO - Datos cargados correctamente en la tabla order_items
+2024-11-23 17:00:49,253 - INFO - Pipeline de datos se ejecuto correctamente
