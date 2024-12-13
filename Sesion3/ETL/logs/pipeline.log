@@ -1,0 +1,18 @@
+
+2024-12-13 23:12:54,983 - INFO - Conexion a la base de datos fue exitosa
+2024-12-13 23:12:54,993 - INFO - Lectura de la consulta fue exitosa
+2024-12-13 23:12:54,995 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-13 23:13:44,698 - INFO - Conexion a la base de datos fue exitosa
+2024-12-13 23:13:44,709 - INFO - Lectura de la consulta fue exitosa
+2024-12-13 23:13:44,711 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-13 23:13:44,711 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-13 23:47:37,663 - INFO - Conexion a la base de datos fue exitosa
+2024-12-13 23:47:37,673 - INFO - Lectura de la consulta fue exitosa
+2024-12-13 23:47:37,675 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-13 23:47:37,675 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-13 23:48:37,821 - INFO - Conexion a la base de datos fue exitosa
+2024-12-13 23:48:37,833 - INFO - Lectura de la consulta fue exitosa
+2024-12-13 23:48:37,835 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-13 23:48:37,835 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-13 23:48:37,837 - INFO - Conexion a la base de datos fue exitosa
+2024-12-13 23:48:37,842 - INFO - Transformacion del merge correctamente
