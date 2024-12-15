@@ -70,3 +70,63 @@
 [SQL: INSERT INTO `dimMovie` (`movieID`, title, `releaseMovie`, gender, `participantName`, roleparticipant, `awardMovie`) VALUES (%s, %s, %s, %s, %s, %s, %s)]
 [parameters: [(80210920, 'The Mother', datetime.date(2023, 1, 5), 'Drama', 'Maria Alejandra Navarro', 'Actor', 'Oscar'), (80192187, 'Triple Frontier', datetime.date(2019, 4, 12), 'Action', 'Joseph Chavez Pineda', 'Actor', 'Oscar'), (81157374, 'Run', datetime.date(2021, 5, 21), 'Adventure', 'aria Lopez Gutierrez', 'Director', 'Grammy')]]
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-15 04:09:48,508 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:09:48,519 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 04:09:48,521 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 04:09:48,522 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 04:09:48,524 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:09:48,529 - INFO - Transformacion del merge correctamente
+2024-12-15 04:09:48,534 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 04:09:48,552 - ERROR - Error al cargar los datos en la tabla dimMovie: (MySQLdb.OperationalError) (3730, "Cannot drop table 'dimMovie' referenced by a foreign key constraint 'fk_factwatchs_movie' on table 'FactWatchs'.")
+[SQL: 
+DROP TABLE `dimMovie`]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-12-15 04:20:40,913 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:20:40,923 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 04:20:40,925 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 04:20:40,925 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 04:20:40,927 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:20:40,932 - INFO - Transformacion del merge correctamente
+2024-12-15 04:20:40,935 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 04:20:40,939 - ERROR - Error al truncar la tabla dimMovie: Not an executable object: 'TRUNCATE TABLE dimMovie'
+2024-12-15 04:24:29,280 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:24:29,290 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 04:24:29,292 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 04:24:29,293 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 04:24:29,295 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:24:29,300 - INFO - Transformacion del merge correctamente
+2024-12-15 04:24:29,303 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 04:24:29,310 - ERROR - Error al truncar la tabla dimMovie: (MySQLdb.OperationalError) (1701, 'Cannot truncate a table referenced in a foreign key constraint (`dw_netflix`.`FactWatchs`, CONSTRAINT `fk_factwatchs_movie`)')
+[SQL: TRUNCATE TABLE dimMovie]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-12-15 04:25:47,145 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:25:47,155 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 04:25:47,157 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 04:25:47,158 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 04:25:47,160 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:25:47,164 - INFO - Transformacion del merge correctamente
+2024-12-15 04:25:47,167 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 04:25:47,172 - ERROR - Error al truncar la tabla dimMovie: (MySQLdb.OperationalError) (1701, 'Cannot truncate a table referenced in a foreign key constraint (`dw_netflix`.`FactWatchs`, CONSTRAINT `fk_factwatchs_movie`)')
+[SQL: TRUNCATE TABLE dimMovie]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-12-15 04:31:09,255 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:31:09,265 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 04:31:09,267 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 04:31:09,267 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 04:31:09,269 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:31:09,274 - INFO - Transformacion del merge correctamente
+2024-12-15 04:31:09,277 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 04:31:09,286 - ERROR - Error al eliminar los registros de la tabla dimMovie: (MySQLdb.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`dw_netflix`.`FactWatchs`, CONSTRAINT `fk_factwatchs_movie` FOREIGN KEY (`movieID`) REFERENCES `dimMovie` (`movieID`))')
+[SQL: DELETE FROM dimMovie]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-15 04:36:04,448 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:36:04,458 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 04:36:04,460 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 04:36:04,461 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 04:36:04,463 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 04:36:04,467 - INFO - Transformacion del merge correctamente
+2024-12-15 04:36:04,471 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 04:36:04,480 - ERROR - Error al cargar los datos en la tabla dimMovie: (MySQLdb.IntegrityError) (1062, "Duplicate entry '80210920' for key 'dimMovie.PRIMARY'")
+[SQL: INSERT INTO `dimMovie` (`movieID`, title, `releaseMovie`, gender, `participantName`, roleparticipant, `awardMovie`) VALUES (%s, %s, %s, %s, %s, %s, %s)]
+[parameters: [(80210920, 'The Mother', datetime.date(2023, 1, 5), 'Drama', 'Maria Alejandra Navarro', 'Actor', 'Oscar'), (80192187, 'Triple Frontier', datetime.date(2019, 4, 12), 'Action', 'Joseph Chavez Pineda', 'Actor', 'Oscar'), (81157374, 'Run', datetime.date(2021, 5, 21), 'Adventure', 'aria Lopez Gutierrez', 'Director', 'Grammy')]]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
