@@ -2,7 +2,11 @@ import pandas as pd
 from sqlalchemy import create_engine
 import logging
 import sys
-from config import DATABASE_CONFIG, DATABASE_CONFIG_2, CSV_FILES, LOG_FILE, QUERY, COLUMNS, COL_DROP
+from config import DATABASE_CONFIG, DATABASE_CONFIG_2, CSV_FILES, LOG_FILE, QUERY, COLUMNS, COL_DROP, DATAFRAMES, LOAD_ORDER
+###
+import random
+from datetime import datetime, timedelta
+import random
 
 logging.basicConfig(
     filename=LOG_FILE,
@@ -84,8 +88,59 @@ def tranform_merge(df, cols_to_replace, col_to_drop):
 
 
 
+def merge_table_cross(table1,table2,PK1,PK2):
+    """    
+    Une dos columnas de dos tablas distintas por el metodo "cross"
+    1) table1:tabla arbitraria
+    2) table2:tabla arbitraria
+    3) PK1: columna arbitraria
+    4) PK2: columna arbitraria
+    """
+    try:
+        column1=table1[PK1]
+        column2=table2[PK2]
+        New_table=pd.merge(column1,column2, how="cross")
+        logging.info("Transformacion del merge_cross correctamente")
+        return New_table
+    except Exception as e:
+        logging.error("Tranformacion de tabla merge_cross fallo")
+        sys.exit(1)
+
+
+def gen_rating():
+    # Generar un número aleatorio entre 0 y 5 con 1 solo decimal
+    numero_aleatorio = round(random.uniform(0, 5), 1)
+    # Mostrar el número aleatorio
+    return numero_aleatorio
+
+def gen_timestamp():
+    # Generar un timestamp aleatorio dentro de un rango específico
+    start_date = datetime(2024, 1, 15)
+    end_date = datetime(2024, 4, 6)
+
+    # Calcular un valor aleatorio entre start_date y end_date
+    random_date = start_date + timedelta(seconds=random.randint(0, int((end_date - start_date).total_seconds())))
+
+    # Mostrar el timestamp aleatorio
+    return random_date
+
+def load_data(engine, table_name, df):
+    """
+    Cargar datos a MySQl dado un dataframe.
+    """
+    try:
+        df.to_sql(name=table_name, con=engine, if_exists='append', index=False)
+        logging.info(f"Datos cargados correctamente en la tabla {table_name}")
+    except Exception as e:
+        logging.error(f"Error al cargar los datos en la tabla {table_name}: {e}")
+        sys.exit(1)
+
+
+
+
 def main():
-    #ETL dimension Movie
+    #ETL dimension MOVIE#
+    ####################
     #Conexión al motor de SQL con la base de datos 'db_movies_netflix_transact'
     engine = create_db_engine(DATABASE_CONFIG)
     conn = engine.connect()
@@ -109,7 +164,38 @@ def main():
     engine = create_db_engine(DATABASE_CONFIG_2)
     conn = engine.connect()
 
+    #Transformación del merge movie_data movies_award
     movie_data = tranform_merge(movie_data, COLUMNS, COL_DROP)
+
+
+
+    #ETL dimension USER#
+    ####################
+    #Extraccion de datos
+    users = pd.read_csv(CSV_FILES['users'], sep='|')
+    #Transformacion: reemplazar idUSER por userID
+    users = users.rename(columns={'idUser': 'userID'})
+
+
+    #ETL tabla de Hechos#
+    #####################
+    #Extraccion: Se creo el dataframe watchs_data que une las columnas 
+    #de las primary key de los dataframe users y la tabla movies_data
+    watchs_data=merge_table_cross(users,movies_data,'userID','movieID')
+    #Añade columna rating: datos creados aleatoriamente
+    watchs_data["rating"]=watchs_data["movieID"].apply(lambda x: gen_rating())
+    #Añade collumna timestamp: datos creados aleatoriamente
+    watchs_data["timestamp"]=watchs_data["userID"].apply(lambda x: gen_timestamp())
+    
+    #Transformación: no hay transformaciones.
+
+    #CARGA (LOADS): Como el procedimiento es el mismo para la tabla de dimensiones
+    #se recomienda iterar con un proceso for.
+
+    for table in LOAD_ORDER:
+        load_data(engine, table, DATAFRAMES[table])
+
+    logging.info("Pipeline de datos se ejecuto correctamente")
 
    
 

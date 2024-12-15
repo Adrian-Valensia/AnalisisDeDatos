@@ -1,6 +1,6 @@
 
 DATABASE_CONFIG = {
-    'host': '10.0.3.22',
+    'host': '10.0.0.183',
     'port': 3310,
     'user': 'root',
     'password': 'root',
@@ -8,7 +8,7 @@ DATABASE_CONFIG = {
 }
 
 DATABASE_CONFIG_2 = {
-    'host': '10.0.3.22',
+    'host': '10.0.0.183',
     'port': 3310,
     'user': 'root',
     'password': 'root',
@@ -40,3 +40,7 @@ SELECT
 
 COLUMNS = {'releaseDate': 'releaseMovie', 'Award': 'awardMovie'}
 COL_DROP = ['IdAward']
+
+LOAD_ORDER = ['dimMovie','dimUser',"FactWatchs"]
+
+DATAFRAMES = {}

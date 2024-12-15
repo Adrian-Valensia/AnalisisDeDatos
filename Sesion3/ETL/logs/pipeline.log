@@ -1,18 +1,22 @@
 
-2024-12-13 23:12:54,983 - INFO - Conexion a la base de datos fue exitosa
-2024-12-13 23:12:54,993 - INFO - Lectura de la consulta fue exitosa
-2024-12-13 23:12:54,995 - INFO - Archivo data/Awards_movie.csv leido correctamente
-2024-12-13 23:13:44,698 - INFO - Conexion a la base de datos fue exitosa
-2024-12-13 23:13:44,709 - INFO - Lectura de la consulta fue exitosa
-2024-12-13 23:13:44,711 - INFO - Archivo data/Awards_movie.csv leido correctamente
-2024-12-13 23:13:44,711 - INFO - Transformacion a movies_award ejecutada correctamente
-2024-12-13 23:47:37,663 - INFO - Conexion a la base de datos fue exitosa
-2024-12-13 23:47:37,673 - INFO - Lectura de la consulta fue exitosa
-2024-12-13 23:47:37,675 - INFO - Archivo data/Awards_movie.csv leido correctamente
-2024-12-13 23:47:37,675 - INFO - Transformacion a movies_award ejecutada correctamente
-2024-12-13 23:48:37,821 - INFO - Conexion a la base de datos fue exitosa
-2024-12-13 23:48:37,833 - INFO - Lectura de la consulta fue exitosa
-2024-12-13 23:48:37,835 - INFO - Archivo data/Awards_movie.csv leido correctamente
-2024-12-13 23:48:37,835 - INFO - Transformacion a movies_award ejecutada correctamente
-2024-12-13 23:48:37,837 - INFO - Conexion a la base de datos fue exitosa
-2024-12-13 23:48:37,842 - INFO - Transformacion del merge correctamente
+2024-12-15 00:44:16,066 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 00:44:16,076 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 00:44:16,078 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 00:44:16,078 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 00:44:16,080 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 00:44:16,085 - INFO - Transformacion del merge correctamente
+2024-12-15 00:44:16,088 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 00:51:48,470 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 00:51:48,480 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 00:51:48,482 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 00:51:48,483 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 00:51:48,485 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 00:51:48,489 - INFO - Transformacion del merge correctamente
+2024-12-15 00:51:48,493 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 00:52:34,118 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 00:52:34,128 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 00:52:34,130 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 00:52:34,131 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 00:52:34,132 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 00:52:34,137 - INFO - Transformacion del merge correctamente
+2024-12-15 00:52:34,140 - INFO - Transformacion del merge_cross correctamente
