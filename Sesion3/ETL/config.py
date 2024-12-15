@@ -1,6 +1,6 @@
 
 DATABASE_CONFIG = {
-    'host': '10.0.0.183',
+    'host': '10.0.0.241',
     'port': 3310,
     'user': 'root',
     'password': 'root',
@@ -8,7 +8,7 @@ DATABASE_CONFIG = {
 }
 
 DATABASE_CONFIG_2 = {
-    'host': '10.0.0.183',
+    'host': '10.0.0.241',
     'port': 3310,
     'user': 'root',
     'password': 'root',

@@ -20,3 +20,53 @@
 2024-12-15 00:52:34,132 - INFO - Conexion a la base de datos fue exitosa
 2024-12-15 00:52:34,137 - INFO - Transformacion del merge correctamente
 2024-12-15 00:52:34,140 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 01:08:41,535 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 01:08:41,547 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 01:08:41,550 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 01:08:41,551 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 01:08:41,554 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 01:08:41,563 - INFO - Transformacion del merge correctamente
+2024-12-15 01:08:41,568 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 02:35:14,272 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:35:14,362 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 02:35:14,366 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 02:35:14,367 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 02:35:14,374 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:35:14,383 - INFO - Transformacion del merge correctamente
+2024-12-15 02:35:14,389 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 02:36:23,077 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:36:23,088 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 02:36:23,090 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 02:36:23,090 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 02:36:23,092 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:36:23,097 - INFO - Transformacion del merge correctamente
+2024-12-15 02:36:23,101 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 02:40:04,360 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:40:04,371 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 02:40:04,373 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 02:40:04,374 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 02:40:04,376 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:40:04,380 - INFO - Transformacion del merge correctamente
+2024-12-15 02:40:04,384 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 02:47:57,576 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:47:57,586 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 02:47:57,588 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 02:47:57,589 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 02:47:57,591 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:47:57,595 - INFO - Transformacion del merge correctamente
+2024-12-15 02:47:57,598 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 02:47:57,654 - INFO - Datos cargados correctamente en la tabla dimMovie
+2024-12-15 02:47:57,666 - INFO - Datos cargados correctamente en la tabla dimUser
+2024-12-15 02:47:57,676 - INFO - Datos cargados correctamente en la tabla FactWatchs
+2024-12-15 02:47:57,676 - INFO - Pipeline de datos se ejecuto correctamente
+2024-12-15 02:48:21,524 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:48:21,534 - INFO - Lectura de la consulta fue exitosa
+2024-12-15 02:48:21,536 - INFO - Archivo data/Awards_movie.csv leido correctamente
+2024-12-15 02:48:21,536 - INFO - Transformacion a movies_award ejecutada correctamente
+2024-12-15 02:48:21,538 - INFO - Conexion a la base de datos fue exitosa
+2024-12-15 02:48:21,543 - INFO - Transformacion del merge correctamente
+2024-12-15 02:48:21,546 - INFO - Transformacion del merge_cross correctamente
+2024-12-15 02:48:21,555 - ERROR - Error al cargar los datos en la tabla dimMovie: (MySQLdb.IntegrityError) (1062, "Duplicate entry '80210920' for key 'dimMovie.PRIMARY'")
+[SQL: INSERT INTO `dimMovie` (`movieID`, title, `releaseMovie`, gender, `participantName`, roleparticipant, `awardMovie`) VALUES (%s, %s, %s, %s, %s, %s, %s)]
+[parameters: [(80210920, 'The Mother', datetime.date(2023, 1, 5), 'Drama', 'Maria Alejandra Navarro', 'Actor', 'Oscar'), (80192187, 'Triple Frontier', datetime.date(2019, 4, 12), 'Action', 'Joseph Chavez Pineda', 'Actor', 'Oscar'), (81157374, 'Run', datetime.date(2021, 5, 21), 'Adventure', 'aria Lopez Gutierrez', 'Director', 'Grammy')]]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

@@ -166,6 +166,7 @@ def main():
 
     #Transformación del merge movie_data movies_award
     movie_data = tranform_merge(movie_data, COLUMNS, COL_DROP)
+    DATAFRAMES['dimMovie'] = movie_data
 
 
 
@@ -175,6 +176,7 @@ def main():
     users = pd.read_csv(CSV_FILES['users'], sep='|')
     #Transformacion: reemplazar idUSER por userID
     users = users.rename(columns={'idUser': 'userID'})
+    DATAFRAMES['dimUser']=users
 
 
     #ETL tabla de Hechos#
@@ -187,13 +189,14 @@ def main():
     #Añade collumna timestamp: datos creados aleatoriamente
     watchs_data["timestamp"]=watchs_data["userID"].apply(lambda x: gen_timestamp())
     
-    #Transformación: no hay transformaciones.
+    #Transformación: guardar tabla en un diccionario 
+    DATAFRAMES['FactWatchs']=watchs_data
 
     #CARGA (LOADS): Como el procedimiento es el mismo para la tabla de dimensiones
-    #se recomienda iterar con un proceso for.
+    #se recomienda iterar con un proceso for
 
     for table in LOAD_ORDER:
-        load_data(engine, table, DATAFRAMES[table])
+       load_data(engine, table, DATAFRAMES[table])
 
     logging.info("Pipeline de datos se ejecuto correctamente")
 
